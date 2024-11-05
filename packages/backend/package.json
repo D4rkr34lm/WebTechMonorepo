@@ -8,10 +8,13 @@
   ],
   "scripts": {},
   "devDependencies": {
+    "@types/cors": "^2.8.17",
     "@types/express": "^5.0.0"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.21.1",
+    "express-async-handler": "^1.2.0",
     "pino": "^9.5.0"
   }
 }

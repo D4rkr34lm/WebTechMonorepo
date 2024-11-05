@@ -2,7 +2,7 @@ import { logger } from "../logger/logger";
 import { HttpMethod } from "./types/httpMethods";
 import { HttpStatusCode } from "./types/httpStatusCodes";
 
-const router: {
+export const router: {
   [route: string]: {
     [method in HttpMethod]: {
       bodyTypeGuard: Parameters<typeof createEndpoint>["2"];
@@ -15,10 +15,10 @@ export function createEndpoint<RequestBody extends object, ResponseBody extends 
   route: `/${string}`,
   method: HttpMethod,
   bodyTypeGuard: (value: unknown) => value is RequestBody,
-  requestHandler: (requestBody: RequestBody) => {
+  requestHandler: (requestBody: RequestBody) => Promise<{
     code: HttpStatusCode;
     responseBody: ResponseBody;
-  },
+  }>,
 ) {
   router[route][method] = { bodyTypeGuard, requestHandler };
   logger.info(`Registering endpoint at [${route}] with method [${method}]`);
