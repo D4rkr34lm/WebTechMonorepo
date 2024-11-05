@@ -1,0 +1,8 @@
+{
+  "name": "web-tech-monorepo",
+  "version": "1.0.0",
+  "description": "A template fullstack repo for the RWTH WebTech Course",
+  "workspaces": ["./packages/backend", "./packages/frontend", "./packages/shared"],
+  "author": "Manuel Frohn",
+  "license": "ISC"
+}

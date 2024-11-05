@@ -1,0 +1,16 @@
+{
+  "extensions": {
+    
+  },
+  "folders": [
+    {"name": "frontend", "path": "./packages/frontend"},
+    {"name": "backend", "path": "./packages/backend"},
+    {"name": "shared", "path": "./packages/shared"},
+    {"name": "root", "path": "."}
+  ],
+  "settings": {
+    "workbench.colorCustomizations": {
+      "titleBar.activeBackground": "#00559f"
+    } 
+  }
+}
