@@ -1,7 +1,6 @@
 {
   "name": "@web-tech/shared",
-  "version": "1.0.0",
-  "description": "A template fullstack repo for the RWTH WebTech Course",
+  "version": "*",
   "workspaces": [
     "./packages/backend",
     "./packages/frontend",
@@ -10,7 +9,5 @@
   "scripts": {
     "build": "tsc --build",
     "watch": "tsc --watch --build"
-  },
-  "author": "Manuel Frohn",
-  "license": "ISC"
+  }
 }

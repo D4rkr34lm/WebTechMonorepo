@@ -1,0 +1,17 @@
+{
+  "name": "@web-tech/backend",
+  "version": "*",
+  "workspaces": [
+    "./packages/backend",
+    "./packages/frontend",
+    "./packages/shared"
+  ],
+  "scripts": {},
+  "devDependencies": {
+    "@types/express": "^5.0.0"
+  },
+  "dependencies": {
+    "express": "^4.21.1",
+    "pino": "^9.5.0"
+  }
+}
