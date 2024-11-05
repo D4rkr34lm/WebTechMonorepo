@@ -6,10 +6,18 @@
     "./packages/frontend",
     "./packages/shared"
   ],
-  "scripts": {},
+  "scripts": {
+    "build": "rollup ./src/index.ts --config",
+    "watch": "rollup ./src/index.ts --config --watch"
+  },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.1",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^15.3.0",
+    "@rollup/plugin-typescript": "^12.1.1",
     "@types/cors": "^2.8.17",
-    "@types/express": "^5.0.0"
+    "@types/express": "^5.0.0",
+    "rollup": "^4.24.4"
   },
   "dependencies": {
     "cors": "^2.8.5",
