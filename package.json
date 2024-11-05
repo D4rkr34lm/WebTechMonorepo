@@ -2,7 +2,20 @@
   "name": "web-tech-monorepo",
   "version": "1.0.0",
   "description": "A template fullstack repo for the RWTH WebTech Course",
-  "workspaces": ["./packages/backend", "./packages/frontend", "./packages/shared"],
+  "workspaces": [
+    "./packages/backend",
+    "./packages/frontend",
+    "./packages/shared"
+  ],
   "author": "Manuel Frohn",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "9.14.0",
+    "eslint": "9.14.0",
+    "globals": "15.12.0",
+    "prettier": "3.3.3",
+    "typescript": "5.6.3",
+    "typescript-eslint": "8.13.0",
+    "eslint-plugin-prettier": "5.2.1"
+  }
 }
