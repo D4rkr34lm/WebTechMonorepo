@@ -1,16 +1,24 @@
 {
-  "extensions": {
-    
-  },
+  "extensions": {},
   "folders": [
-    {"name": "frontend", "path": "./packages/frontend"},
-    {"name": "backend", "path": "./packages/backend"},
-    {"name": "shared", "path": "./packages/shared"},
-    {"name": "root", "path": "."}
+    { "name": "frontend", "path": "./packages/frontend" },
+    { "name": "backend", "path": "./packages/backend" },
+    { "name": "shared", "path": "./packages/shared" },
+    { "name": "root", "path": "." },
   ],
   "settings": {
     "workbench.colorCustomizations": {
-      "titleBar.activeBackground": "#00559f"
-    } 
-  }
+      "titleBar.activeBackground": "#00559f",
+    },
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "always",
+      "source.addMissingImports.ts": "always",
+      "source.removeUnusedImports": "always",
+      "source.organizeImports": "always",
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2,
+    "files.eol": "\r\n",
+  },
 }
