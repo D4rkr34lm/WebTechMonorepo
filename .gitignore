@@ -13,3 +13,4 @@ testem.log
 npm-debug.log
 yarn-error.log
 .angular
+test-results
