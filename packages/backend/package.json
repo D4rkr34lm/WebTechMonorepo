@@ -8,16 +8,20 @@
   ],
   "scripts": {
     "build": "rollup ./src/index.ts --config",
-    "watch": "rollup ./src/index.ts --config --watch"
+    "watch": "rollup ./src/index.ts --config --watch",
+    "test": "vitest run"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^28.0.1",
     "@rollup/plugin-json": "^6.1.0",
     "@rollup/plugin-node-resolve": "^15.3.0",
     "@rollup/plugin-typescript": "^12.1.1",
+    "@types/axios": "^0.9.36",
     "@types/cors": "^2.8.17",
     "@types/express": "^5.0.0",
-    "rollup": "^4.24.4"
+    "axios": "^1.7.7",
+    "rollup": "^4.24.4",
+    "vitest": "^2.1.4"
   },
   "dependencies": {
     "cors": "^2.8.5",
@@ -26,3 +30,4 @@
     "pino": "^9.5.0"
   }
 }
+

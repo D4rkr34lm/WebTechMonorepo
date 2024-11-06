@@ -49,5 +49,6 @@ export function initApi() {
   app.use(apiLogger);
   addRouterToExpress(app);
 
+  app.listen(8080);
   logger.info("Initializing Api finished!");
 }

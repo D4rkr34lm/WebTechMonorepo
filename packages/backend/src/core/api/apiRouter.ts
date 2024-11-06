@@ -1,10 +1,11 @@
+import { hasNoValue } from "@web-tech/shared/lib/typeGuards";
 import { logger } from "../logger/logger";
 import { HttpMethod } from "./types/httpMethods";
 import { HttpStatusCode } from "./types/httpStatusCodes";
 
 export const router: {
   [route: string]: {
-    [method in HttpMethod]: {
+    [method in HttpMethod]?: {
       bodyTypeGuard: Parameters<typeof createEndpoint>["2"];
       requestHandler: Parameters<typeof createEndpoint>["3"];
     };
@@ -20,6 +21,9 @@ export function createEndpoint<RequestBody extends object, ResponseBody extends 
     responseBody: ResponseBody;
   }>,
 ) {
+  if (hasNoValue(router[route])) {
+    router[route] = {};
+  }
   router[route][method] = { bodyTypeGuard, requestHandler };
   logger.info(`Registering endpoint at [${route}] with method [${method}]`);
 }
