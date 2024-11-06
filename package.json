@@ -10,6 +10,10 @@
   "author": "Manuel Frohn",
   "license": "ISC",
   "scripts": {
+    "dev-db:init": "docker run -d --name web-tech-dev-db -v postgres_data:/var/lib/postgresql/data -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=dev-pw -p 9001:5432 postgres:latest && psql -h localhost -d postgres -U postgres -p 9001 -a -q -f ./packages/backend/src/core/db/initDb.sql",
+    "dev-db:run": "docker run web-tech-dev-db",
+    "dev-db:stop": "docker stop web-tech-dev-db",
+    "dev-db:re-init": "npm run dev-db:stop && docker rm web-tech-dev-db && npm run dev-db:init",
     "shared:build": "cd ./packages/shared && npm run build",
     "shared:watch": "cd ./packages/shared && npm run watch"
   },
@@ -31,3 +35,4 @@
     "neverthrow": "^8.1.1"
   }
 }
+

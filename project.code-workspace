@@ -20,5 +20,18 @@
     "editor.formatOnSave": true,
     "editor.tabSize": 2,
     "files.eol": "\r\n",
+    "sqltools.connections": [
+      {
+        "previewLimit": 50,
+        "server": "localhost",
+        "port": 9001,
+        "driver": "PostgreSQL",
+        "name": "DEV",
+        "database": "postgres",
+        "username": "postgres",
+        "password": "dev-pw",
+      },
+    ],
   },
 }
+

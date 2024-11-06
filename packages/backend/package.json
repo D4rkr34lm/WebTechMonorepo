@@ -24,10 +24,12 @@
     "vitest": "^2.1.4"
   },
   "dependencies": {
+    "@types/pg": "^8.11.10",
     "cors": "^2.8.5",
     "express": "^4.21.1",
     "express-async-handler": "^1.2.0",
-    "pino": "^9.5.0"
+    "pg": "^8.13.1",
+    "pino": "^9.5.0",
+    "ts-sql-query": "^1.65.0"
   }
 }
-
