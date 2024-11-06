@@ -2,3 +2,14 @@ node_modules
 .vscode
 lib
 dist
+
+/.angular/cache
+.sass-cache/
+/connect.lock
+/coverage
+/libpeerconnection.log
+testem.log
+/typings
+npm-debug.log
+yarn-error.log
+.angular
