@@ -2,7 +2,7 @@
   "name": "frontend",
   "version": "0.0.0",
   "scripts": {
-    "dev": "ng serve",
+    "dev": "ng serve --proxy-config proxy.config.json",
     "test:unit": "ng test",
     "test:e2e": "ng e2e",
     "build": "ng build",
