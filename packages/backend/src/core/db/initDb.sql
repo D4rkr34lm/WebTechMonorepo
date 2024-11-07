@@ -4,4 +4,4 @@ CREATE TABLE database_history(
   migration_date DATE,
 );
 
-INSERT INTO TABLE database_history(1, "Manuel Frohn", NULL);
+INSERT INTO TABLE database_history(1, "Manuel Frohn", GETDATE());
