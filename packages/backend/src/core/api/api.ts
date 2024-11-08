@@ -1,4 +1,3 @@
-import cors from "cors";
 import express, { Express } from "express";
 import expressAsyncHandler from "express-async-handler";
 import { forEach } from "lodash";
@@ -44,7 +43,6 @@ export function initApi() {
   logger.info("Initializing Api ...");
   const app = express();
 
-  app.use(cors());
   app.use(express.json());
   app.use(apiLogger);
   addRouterToExpress(app);

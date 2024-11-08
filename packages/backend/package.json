@@ -1,6 +1,6 @@
 {
   "name": "@web-tech/backend",
-  "version": "*",
+  "version": "1.0.0",
   "workspaces": [
     "./packages/backend",
     "./packages/frontend",
@@ -26,7 +26,6 @@
   "dependencies": {
     "@web-tech/shared": "*",
     "@types/pg": "^8.11.10",
-    "cors": "^2.8.5",
     "express": "^4.21.1",
     "express-async-handler": "^1.2.0",
     "pg": "^8.13.1",

@@ -1,4 +1,4 @@
-import { hasNoValue } from "@web-tech/shared/lib/typeGuards";
+import { hasNoValue } from "@web-tech/shared/lib/util/typeGuards";
 import { logger } from "../logger/logger";
 import { HttpMethod } from "./types/httpMethods";
 import { HttpStatusCode } from "./types/httpStatusCodes";

@@ -1,6 +1,7 @@
 {
   "name": "@web-tech/shared",
-  "version": "*",
+  "version": "1.0.0",
+  "type": "module",
   "workspaces": [
     "./packages/backend",
     "./packages/frontend",
@@ -11,4 +12,3 @@
     "watch": "tsc --watch --build"
   }
 }
-
