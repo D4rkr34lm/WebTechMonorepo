@@ -11,12 +11,21 @@
   "author": "Manuel Frohn",
   "license": "ISC",
   "scripts": {
-    "dev-db:init": "docker run -d --name web-tech-dev-db -v postgres_data:/var/lib/postgresql/data -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=dev-pw -p 9001:5432 postgres:latest && psql -h localhost -d postgres -U postgres -p 9001 -a -q -f ./packages/backend/src/core/db/initDb.sql",
+    "dev-db:init": "docker run -d --name web-tech-dev-db -v postgres_data:/var/lib/postgresql/data -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=dev-pw -p 9001:5432 postgres:latest && psql -h localhost -d postgres -U postgres -p 9001 -a -q -f ./packages/backend/src/db/initDb.sql",
     "dev-db:run": "docker run web-tech-dev-db",
     "dev-db:stop": "docker stop web-tech-dev-db",
     "dev-db:re-init": "npm run dev-db:stop && docker rm web-tech-dev-db && npm run dev-db:init",
     "shared:build": "cd ./packages/shared && npm run build",
-    "shared:watch": "cd ./packages/shared && npm run watch"
+    "shared:watch": "cd ./packages/shared && npm run watch",
+    "shared:test": "cd ./packages/shared && npm run test",
+    "backend:watch": "cd ./packages/backend && npm run watch",
+    "backend:build": "cd ./packages/backend && npm run build",
+    "backend:test": "cd ./packages/backend && npm run test",
+    "backend:dev": "cd ./packages/backend && npm run dev",
+    "frontend:build": "cd ./packages/frontend && npm run build",
+    "frontend:test:unit": "cd ./packages/frontend && npm run test:unit",
+    "frontend:test:e2e": "cd ./packages/frontend && npm run test:e2e",
+    "frontend:dev": "cd ./packages/frontend && npm run dev"
   },
   "devDependencies": {
     "@eslint/js": "9.14.0",
